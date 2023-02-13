@@ -1,6 +1,6 @@
 CREATE DATABASE db_CadastroVeiculos;
 
-USE CadastroVeiculos;
+USE db_CadastroVeiculos;
 
 CREATE TABLE Fabricante(
 	id int auto_increment,
@@ -9,6 +9,18 @@ CREATE TABLE Fabricante(
 );
 
 CREATE TABLE Combustivel(
+	id int auto_increment,
+    nome varchar(150) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Marca(
+	id int auto_increment,
+    nome varchar(150) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE TipoDeVeiculo(
 	id int auto_increment,
     nome varchar(150) NOT NULL,
     PRIMARY KEY (id)
