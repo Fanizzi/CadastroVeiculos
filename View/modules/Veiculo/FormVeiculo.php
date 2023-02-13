@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <style>
+        label, input { display: block;}
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+</head>
+<body>
+
+    <form action="/veiculo/save" method="post">
+
+
+    <div class="container">
+        
+        <h2>Cadastro de Veículos</h2>
+
+        <input type="hidden" value="<?= $model->id ?>" name="id"> 
+
+        <label for="marca">Marca:</label>
+        <select name="marca">
+            <?php foreach($model->lista_marca as $marca):?>
+                <option value="<?= $marca['id']?>" <?= ($marca['id'] == $marca->id_marca) ? 'selected' : " " ?> >
+                    <?= $marca['marca'] ?>
+                </option>
+            <?php endforeach ?>
+        </select>
+
+        <label for="modelo">Modelo:</label>
+        <input name="modelo" id="modelo" type="text" value="<?= $model->modelo ?>">
+
+        <label for="fabricante">Fabricante:</label>
+        <select name="fabricante">
+            <?php foreach($model->lista_fabricante as $fabricante):?>
+                <option value="<?= $fabricante['id']?>" <?= ($fabricante['id'] == $fabricante->id_fabricante) ? 'selected' : " " ?> >
+                    <?= $fabricante['fabricante'] ?>
+                </option>
+            <?php endforeach ?>
+        </select>
+
+        <label for="tipo">Tipo:</label>
+        <select name="fabricante">
+        <?php foreach($tipo->lista_tipo as $tipo):?>
+                <option value="<?= $tipo['id']?>" <?= ($tipo['id'] == $tipo->id_tipo) ? 'selected' : " " ?> >
+                    <?= $tipo['tipo'] ?>
+                </option>
+            <?php endforeach ?>
+        </select>
+
+        <label for="data">Data:</label>
+        <input name="data" id="data" type="date" value="<?= $model->data ?>" >
+
+        <label for="combustivel">Combutível:</label>
+        <select name="combustivel">
+        <?php foreach($combustivel->lista_combustivel as $combustivel):?>
+                <option value="<?= $combustivel['id']?>" <?= ($combustivel['id'] == $combustivel->id_combustivel) ? 'selected' : " " ?> >
+                    <?= $combustivel['combustivel'] ?>
+                </option>
+            <?php endforeach ?>
+        </select>
+
+        <label for="cor">Cor:</label>
+        <input name="cor" id="cor" type="text" value="<?= $model->cor ?>" >
+
+        <label for="numeroChassi">Número Chassi:</label>
+        <input name="numeroChassi" id="numeroChassi" type="text" value="<?= $model->numeroChassi ?>" >
+
+        <label for="kilometragem">Kilometragem:</label>
+        <input name="kilometragem" id="kilometragem" type="text" value="<?= $model->kilometragem ?>" >
+
+        <label for="revisao">Revisão:</label>
+        <input name="revisao" id="revisao" type="checkbox" value="<?= $model->revisao ?>">
+
+        <label for="sinistro">Sinistro:</label>
+        <input name="sinistro" id="sinistro" type="checkbox" value="<?= $model->sinistro ?>" >
+
+        <label for="roubo_furto">Roubo/Furto:</label>
+        <input name="roubo_furto" id="roubo_furto" type="checkbox" value="<?= $model->roubo_furto ?>" >
+
+        <label for="aluguel">Aluguel:</label>
+        <input name="aluguel" id="aluguel" type="checkbox" value="<?= $model->aluguel ?>" >
+
+        <label for="venda">Venda:</label>
+        <input name="venda" id="venda" type="checkbox" value="<?= $model->venda ?>" >
+
+        <label for="particular">Particular:</label>
+        <input name="particular" id="particular" type="checkbox" value="<?= $model->particular ?>" >
+
+        <label for="observacoes">Observações:</label>
+        <input name="observacoes" id="observacoes" type="text" value="<?= $model->observacoes ?>" >
+
+        <button type="submit">Cadastrar</button>
+
+    </div>
+
+    </form>
+    
+</body>
+</html>
