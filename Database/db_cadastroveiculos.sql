@@ -33,7 +33,6 @@ CREATE TABLE Veiculo(
     numero_chassi char(17) NOT NULL,
     cor varchar(150) NOT NULL,
     kilometragem varchar(150) NOT NULL,
-    modelo varchar(150) NOT NULL,
     revisao bool NOT NULL,
     sinistro bool NOT NULL,
     roubo_furto bool NOT NULL,
