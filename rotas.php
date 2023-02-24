@@ -1,12 +1,15 @@
 <?php
 
 use CadastroVeiculos\Controller\MarcaController;
-USE CadastroVeiculos\Controller\FabricanteController;
+use CadastroVeiculos\Controller\FabricanteController;
+use CadastroVeiculos\Controller\TipoController;
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($uri_parse)
 {
+    # ROTAS PARA MARCA #
+
     case '/marca':
         MarcaController::index();
     break;
@@ -23,7 +26,7 @@ switch($uri_parse)
         MarcaController::delete();
     break;
 
-
+    # ROTAS PARA FABRICANTE #
     
     case '/fabricante':
         FabricanteController::index();
@@ -39,6 +42,24 @@ switch($uri_parse)
 
     case '/fabricante/delete':
         FabricanteController::delete();
+    break;
+
+    # ROTAS PARA TIPO DE VEÍCULOS #
+
+    case '/tipo':
+        TipoController::index();
+    break;
+
+    case '/tipo/form':
+        TipoController::form();
+    break;
+
+    case '/tipo/save':
+        TipoController::save();
+    break;
+
+    case '/tipo/delete':
+        TipoController::delete();
     break;
         
 
