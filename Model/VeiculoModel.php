@@ -10,7 +10,10 @@ use CadastroVeiculos\DAO\VeiculoDAO;
 
 class VeiculoModel extends Model
 {
-    public $id, $nome;
+    public $id, $modelo, $ano_fabricado, $numero_chassi, $cor, $kilometragem, $revisao, $sinistro, $roubo_furto, $aluguel, 
+    $venda, $particular, $observacoes, $id_Marca, $id_Fabricante, $id_TipoDeVeiculo, $id_Combustivel;
+
+    public $lista_marca, $lista_fabricante, $lista_tipo, $lista_combustivel;
 
     public function save()
     {

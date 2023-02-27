@@ -4,6 +4,7 @@ use CadastroVeiculos\Controller\MarcaController;
 use CadastroVeiculos\Controller\FabricanteController;
 use CadastroVeiculos\Controller\TipoController;
 use CadastroVeiculos\Controller\CombustivelController;
+use CadastroVeiculos\Controller\VeiculoController;
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -79,6 +80,24 @@ switch($uri_parse)
 
     case '/combustivel/delete':
         CombustivelController::delete();
+    break;
+
+    # ROTAS PARA VEÍCULOS #
+
+    case '/veiculo':
+        VeiculoController::index();
+    break;
+
+    case '/veiculo/form':
+        VeiculoController::form();
+    break;
+
+    case '/veiculo/save':
+        VeiculoController::save();
+    break;
+
+    case '/veiculo/delete':
+        VeiculoController::delete();
     break;
         
 

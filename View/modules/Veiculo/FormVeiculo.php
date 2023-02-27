@@ -26,8 +26,8 @@
         <label for="marca">Marca:</label>
         <select name="marca">
             <?php foreach($model->lista_marca as $marca):?>
-                <option value="<?= $marca['id']?>" <?= ($marca['id'] == $marca->id_marca) ? 'selected' : " " ?> >
-                    <?= $marca['marca'] ?>
+                <option value="<?= $marca['id']?>" <?= ($marca['id'] == $model->id_Marca) ? 'selected' : " " ?> >
+                    <?= $marca['nome'] ?>
                 </option>
             <?php endforeach ?>
         </select>
@@ -38,17 +38,17 @@
         <label for="fabricante">Fabricante:</label>
         <select name="fabricante">
             <?php foreach($model->lista_fabricante as $fabricante):?>
-                <option value="<?= $fabricante['id']?>" <?= ($fabricante['id'] == $fabricante->id_fabricante) ? 'selected' : " " ?> >
-                    <?= $fabricante['fabricante'] ?>
+                <option value="<?= $fabricante['id']?>" <?= ($fabricante['id'] == $model->id_Fabricante) ? 'selected' : " " ?> >
+                    <?= $fabricante['nome'] ?>
                 </option>
             <?php endforeach ?>
         </select>
 
         <label for="tipo">Tipo:</label>
-        <select name="fabricante">
-        <?php foreach($tipo->lista_tipo as $tipo):?>
-                <option value="<?= $tipo['id']?>" <?= ($tipo['id'] == $tipo->id_tipo) ? 'selected' : " " ?> >
-                    <?= $tipo['tipo'] ?>
+        <select name="tipo">
+        <?php foreach($model->lista_tipo as $tipo):?>
+                <option value="<?= $tipo['id']?>" <?= ($tipo['id'] == $model->id_TipoDeVeiculo) ? 'selected' : " " ?> >
+                    <?= $tipo['nome'] ?>
                 </option>
             <?php endforeach ?>
         </select>
@@ -56,11 +56,11 @@
         <label for="data">Data:</label>
         <input name="data" id="data" type="date" value="<?= $model->data ?>" >
 
-        <label for="combustivel">Combutível:</label>
+        <label for="combustivel">Combustível:</label>
         <select name="combustivel">
-        <?php foreach($combustivel->lista_combustivel as $combustivel):?>
-                <option value="<?= $combustivel['id']?>" <?= ($combustivel['id'] == $combustivel->id_combustivel) ? 'selected' : " " ?> >
-                    <?= $combustivel['combustivel'] ?>
+        <?php foreach($model->lista_combustivel as $combustivel):?>
+                <option value="<?= $combustivel['id']?>" <?= ($combustivel['id'] == $model->id_Combustivel) ? 'selected' : " " ?> >
+                    <?= $combustivel['nome'] ?>
                 </option>
             <?php endforeach ?>
         </select>
@@ -69,7 +69,7 @@
         <input name="cor" id="cor" type="text" value="<?= $model->cor ?>" >
 
         <label for="numeroChassi">Número Chassi:</label>
-        <input name="numeroChassi" id="numeroChassi" type="text" value="<?= $model->numeroChassi ?>" >
+        <input name="numeroChassi" id="numeroChassi" type="text" value="<?= $model->numero_chassi ?>" >
 
         <label for="kilometragem">Kilometragem:</label>
         <input name="kilometragem" id="kilometragem" type="text" value="<?= $model->kilometragem ?>" >

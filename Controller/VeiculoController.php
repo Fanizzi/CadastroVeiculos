@@ -22,10 +22,10 @@ class VeiculoController extends Controller
         if (isset($_GET['id']))
             $model = $model->getById( (int) $_GET['id']);
 
-        $model->marca = $model->getAllMarcas();
-        $model->fabricante = $model->getAllFabricantes();
-        $model->tipo_veiculo = $model->getAllTipoVeiculos();
-        $model->combustivel = $model->getAllCombustivel();
+        $model->lista_marca = $model->getAllMarcas();
+        $model->lista_fabricante = $model->getAllFabricantes();
+        $model->lista_tipo = $model->getAllTipoVeiculos();
+        $model->lista_combustivel = $model->getAllCombustivel();
 
         parent::render('Veiculo/FormVeiculo', $model);
     }
@@ -46,7 +46,7 @@ class VeiculoController extends Controller
         $veiculo->aluguel = $_POST['aluguel'];
         $veiculo->venda = $_POST['venda'];
         $veiculo->particular = $_POST['particular'];
-        $veiculo->observacao = $_POST['observacao'];
+        $veiculo->observacoes = $_POST['observacao'];
         $veiculo->id_Marca = $_POST['id_Marca'];
         $veiculo->id_Fabricante = $_POST['id_Fabricante'];
         $veiculo->id_TipoDeVeiculo = $_POST['id_TipoDeVeiculo'];

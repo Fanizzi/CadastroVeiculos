@@ -29,7 +29,7 @@ CREATE TABLE TipoDeVeiculo(
 CREATE TABLE Veiculo(
 	id int auto_increment,
 	modelo varchar(150) NOT NULL,
-    ano_fabricado int NOT NULL,
+    ano_fabricado date NOT NULL,
     numero_chassi char(17) NOT NULL,
     cor varchar(150) NOT NULL,
     kilometragem varchar(150) NOT NULL,
