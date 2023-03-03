@@ -53,8 +53,8 @@
             <?php endforeach ?>
         </select>
 
-        <label for="data">Data:</label>
-        <input name="data" id="data" type="date" value="<?= $model->data ?>" >
+        <label for="data">Ano Fabricado:</label>
+        <input name="ano_fabricado" id="ano_fabricado" type="date" value="<?= $model->ano_fabricado ?>" >
 
         <label for="combustivel">Combustível:</label>
         <select name="combustivel">
@@ -69,7 +69,7 @@
         <input name="cor" id="cor" type="text" value="<?= $model->cor ?>" >
 
         <label for="numeroChassi">Número Chassi:</label>
-        <input name="numeroChassi" id="numeroChassi" type="text" value="<?= $model->numero_chassi ?>" >
+        <input name="numero_chassi" id="numero_chassi" type="text" value="<?= $model->numero_chassi ?>" >
 
         <label for="kilometragem">Kilometragem:</label>
         <input name="kilometragem" id="kilometragem" type="text" value="<?= $model->kilometragem ?>" >
@@ -93,7 +93,7 @@
         <input name="particular" id="particular" type="checkbox" value="<?= $model->particular ?>" >
 
         <label for="observacoes">Observações:</label>
-        <input name="observacoes" id="observacoes" type="text" value="<?= $model->observacoes ?>" >
+        <input name="observacao" id="observacao" type="text" value="<?= $model->observacao ?>" >
 
         <button type="submit">Cadastrar</button>
 

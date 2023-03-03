@@ -22,13 +22,13 @@
         <tr>
 
             <td>
-                <a href="/combustivel/delete?id=<?= $item->id ?>">X</a>
+                <a href="/combustivel/delete?id=<?= $item['id'] ?>">X</a>
             </td>
 
-            <td><?= $item->id ?></td>
+            <td><?= $item['id'] ?></td>
 
             <td>
-                <a href="/combustivel/form?id=<?= $item->id ?>"><?= $item->nome ?></a>
+                <a href="/combustivel/form?id=<?= $item['id'] ?>"><?= $item['nome'] ?></a>
             </td>
 
         </tr>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Tipo de Veículo</title>
+    <title>Cadastro de Tipos de Veículos</title>
     <style>
         label, input { display: block;}
     </style>
@@ -13,7 +13,7 @@
 
     <form action="/tipo/save" method="post">
 
-        <h1> Cadastro de Tipo de Veículo </h1>
+        <h1>Cadastro de Tipos de Veículos</h1>
 
         <div class="box">
             <div class="container">

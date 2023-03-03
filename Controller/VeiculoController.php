@@ -13,18 +13,19 @@ class VeiculoController extends Controller
         $model->getAllRows();
 
         parent::render('Veiculo/ListaVeiculo', $model);
+
     }
     
     public static function form()
     {
         $model = new VeiculoModel();
 
-        if (isset($_GET['id']))
+        if(isset($_GET['id']))
             $model = $model->getById( (int) $_GET['id']);
 
-        $model->lista_marca = $model->getAllMarcas();
-        $model->lista_fabricante = $model->getAllFabricantes();
-        $model->lista_tipo = $model->getAllTipoVeiculos();
+        $model->lista_marca = $model->getAllMarca();
+        $model->lista_fabricante = $model->getAllFabricante();
+        $model->lista_tipo = $model->getAllTipo();
         $model->lista_combustivel = $model->getAllCombustivel();
 
         parent::render('Veiculo/FormVeiculo', $model);
@@ -40,17 +41,17 @@ class VeiculoController extends Controller
         $veiculo->numero_chassi = $_POST['numero_chassi'];
         $veiculo->cor = $_POST['cor'];
         $veiculo->kilometragem = $_POST['kilometragem'];
-        $veiculo->revisao = $_POST['revisao'];
-        $veiculo->sinistro = $_POST['sinistro'];
-        $veiculo->roubo_furto = $_POST['roubo_furto'];
-        $veiculo->aluguel = $_POST['aluguel'];
-        $veiculo->venda = $_POST['venda'];
-        $veiculo->particular = $_POST['particular'];
-        $veiculo->observacoes = $_POST['observacao'];
-        $veiculo->id_Marca = $_POST['id_Marca'];
-        $veiculo->id_Fabricante = $_POST['id_Fabricante'];
-        $veiculo->id_TipoDeVeiculo = $_POST['id_TipoDeVeiculo'];
-        $veiculo->id_Combustivel = $_POST['id_Combustivel'];
+        $veiculo->revisao = array_key_exists('revisao', $_POST) ? true : false;
+        $veiculo->sinistro = array_key_exists('sinistro', $_POST) ? true : false;
+        $veiculo->roubo_furto = array_key_exists('roubo_furto', $_POST) ? true : false;
+        $veiculo->aluguel = array_key_exists('aluguel', $_POST) ? true : false;
+        $veiculo->venda = array_key_exists('venda', $_POST) ? true : false;
+        $veiculo->particular = array_key_exists('particular', $_POST) ? true : false;
+        $veiculo->observacao = $_POST['observacao'];
+        $veiculo->id_Marca = $_POST['marca'];
+        $veiculo->id_Fabricante = $_POST['fabricante'];
+        $veiculo->id_TipoDeVeiculo = $_POST['tipo'];
+        $veiculo->id_Combustivel = $_POST['combustivel'];
         $veiculo->save();
 
         header("Location: /veiculo");

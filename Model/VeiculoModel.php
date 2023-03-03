@@ -11,7 +11,7 @@ use CadastroVeiculos\DAO\VeiculoDAO;
 class VeiculoModel extends Model
 {
     public $id, $modelo, $ano_fabricado, $numero_chassi, $cor, $kilometragem, $revisao, $sinistro, $roubo_furto, $aluguel, 
-    $venda, $particular, $observacoes, $id_Marca, $id_Fabricante, $id_TipoDeVeiculo, $id_Combustivel;
+    $venda, $particular, $observacao, $id_Marca, $id_Fabricante, $id_TipoDeVeiculo, $id_Combustivel;
 
     public $lista_marca, $lista_fabricante, $lista_tipo, $lista_combustivel;
 
@@ -29,38 +29,38 @@ class VeiculoModel extends Model
         }
     }
 
-    public function getAllRows()
-    {
-        $dao = new VeiculoDAO();
-
-        $this->rows = $dao->select();
-    }
-
-    public function getAllMarcas()
+    public function getAllMarca()
     {
         $dao = new MarcaDAO();
 
-        $this->rows = $dao->select();
+        return $dao->select();
     }
 
-    public function getAllFabricantes()
+    public function getAllFabricante()
     {
         $dao = new FabricanteDAO();
-
-        $this->rows = $dao->select();
+        
+        return $dao->select();
     }
 
-    public function getAllTipoVeiculos()
+    public function getAllTipo()
     {
         $dao = new TipoDAO();
-
-        $this->rows = $dao->select();
+        
+        return $dao->select();
     }
 
     public function getAllCombustivel()
     {
         $dao = new CombustivelDAO();
 
+        return $dao->select();
+    }
+
+    public function getAllRows()
+    {
+        $dao = new VeiculoDAO();
+        
         $this->rows = $dao->select();
     }
 

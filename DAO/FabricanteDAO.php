@@ -41,7 +41,7 @@ class FabricanteDAO extends DAO
 
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        return $stmt->fetchAll();
     }
 
     public function selectById(int $id)
