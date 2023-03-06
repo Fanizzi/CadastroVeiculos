@@ -68,7 +68,7 @@
         <label for="cor">Cor:</label>
         <input name="cor" id="cor" type="text" value="<?= $model->cor ?>" >
 
-        <label for="numeroChassi">Número Chassi:</label>
+        <label for="numero_chassi">Número Chassi:</label>
         <input name="numero_chassi" id="numero_chassi" type="text" value="<?= $model->numero_chassi ?>" >
 
         <label for="kilometragem">Kilometragem:</label>

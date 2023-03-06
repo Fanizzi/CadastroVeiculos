@@ -60,7 +60,7 @@ class VeiculoModel extends Model
     public function getAllRows()
     {
         $dao = new VeiculoDAO();
-        
+
         $this->rows = $dao->select();
     }
 

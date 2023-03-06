@@ -1,0 +1,14 @@
+body{
+    margin: auto;
+}
+
+table{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.edit{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
