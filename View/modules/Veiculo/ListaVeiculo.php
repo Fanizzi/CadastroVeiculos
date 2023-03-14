@@ -12,11 +12,11 @@
 </head>
 <body>
 
-    <h1>Lista de Veículos</h1>
+    <h1 style="text-align: center; padding: 10px;">Lista de Veículos</h1>
 
-    <table class="table table-bordered">
+    <table class="table table-striped table-bordered border border-secondary">
         <thead>
-            <tr style="background-color: #87CEEB;">
+            <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Modelo</th>
                 <th scope="col">Ano_Fabricado</th>

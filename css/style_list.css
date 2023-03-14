@@ -1,10 +1,10 @@
 body{
     margin: auto;
+    padding: 10px;
 }
 
 table{
     text-align: center;
-    border: 2px solid black;
 }
 
 .edit{
