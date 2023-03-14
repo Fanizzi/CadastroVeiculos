@@ -22,7 +22,7 @@
 
     <div class="container">
         
-        <h2>Cadastro de Veículos</h2>
+        <h2 style="text-align: center;">Cadastro de Veículos</h2>
 
         <div class="form-group">
 
@@ -38,10 +38,10 @@
             </select>
 
             <label for="modelo">Modelo:</label>
-            <input name="modelo" id="modelo" type="text" value="<?= $model->modelo ?>">
+            <input name="modelo" id="modelo" type="text" class="form-control" value="<?= $model->modelo ?>">
 
             <label for="fabricante">Fabricante:</label>
-            <select name="fabricante">
+            <select name="fabricante" class="form-select">
                 <?php foreach($model->lista_fabricante as $fabricante):?>
                     <option value="<?= $fabricante['id']?>" <?= ($fabricante['id'] == $model->id_Fabricante) ? 'selected' : " " ?> >
                         <?= $fabricante['nome'] ?>
@@ -50,7 +50,7 @@
             </select>
 
             <label for="tipo">Tipo:</label>
-            <select name="tipo">
+            <select name="tipo" class="form-select">
             <?php foreach($model->lista_tipo as $tipo):?>
                     <option value="<?= $tipo['id']?>" <?= ($tipo['id'] == $model->id_TipoDeVeiculo) ? 'selected' : " " ?> >
                         <?= $tipo['nome'] ?>
@@ -59,10 +59,10 @@
             </select>
 
             <label for="data">Ano Fabricado:</label>
-            <input name="ano_fabricado" id="ano_fabricado" type="date" value="<?= $model->ano_fabricado ?>" >
+            <input name="ano_fabricado" id="ano_fabricado" type="date" class="form-control" value="<?= $model->ano_fabricado ?>" >
 
             <label for="combustivel">Combustível:</label>
-            <select name="combustivel">
+            <select name="combustivel" class="form-select">
             <?php foreach($model->lista_combustivel as $combustivel):?>
                     <option value="<?= $combustivel['id']?>" <?= ($combustivel['id'] == $model->id_Combustivel) ? 'selected' : " " ?> >
                         <?= $combustivel['nome'] ?>
@@ -71,36 +71,36 @@
             </select>
 
             <label for="cor">Cor:</label>
-            <input name="cor" id="cor" type="text" value="<?= $model->cor ?>" >
+            <input name="cor" id="cor" type="text" class="form-control" value="<?= $model->cor ?>" >
 
             <label for="numero_chassi">Número Chassi:</label>
-            <input name="numero_chassi" id="numero_chassi" type="text" value="<?= $model->numero_chassi ?>" >
+            <input name="numero_chassi" id="numero_chassi" type="text" class="form-control" value="<?= $model->numero_chassi ?>" >
 
             <label for="kilometragem">Kilometragem:</label>
-            <input name="kilometragem" id="kilometragem" type="text" value="<?= $model->kilometragem ?>" >
+            <input name="kilometragem" id="kilometragem" type="text" class="form-control" value="<?= $model->kilometragem ?>" >
 
             <label for="revisao">Revisão:</label>
-            <input name="revisao" id="revisao" type="checkbox" value="<?= $model->revisao ?>">
+            <input name="revisao" id="revisao" type="checkbox" class="form-check-input" value="<?= $model->revisao ?>">
 
             <label for="sinistro">Sinistro:</label>
-            <input name="sinistro" id="sinistro" type="checkbox" value="<?= $model->sinistro ?>" >
+            <input name="sinistro" id="sinistro" type="checkbox" class="form-check-input" value="<?= $model->sinistro ?>" >
 
             <label for="roubo_furto">Roubo/Furto:</label>
-            <input name="roubo_furto" id="roubo_furto" type="checkbox" value="<?= $model->roubo_furto ?>" >
+            <input name="roubo_furto" id="roubo_furto" type="checkbox" class="form-check-input" value="<?= $model->roubo_furto ?>" >
 
             <label for="aluguel">Aluguel:</label>
-            <input name="aluguel" id="aluguel" type="checkbox" value="<?= $model->aluguel ?>" >
+            <input name="aluguel" id="aluguel" type="checkbox" class="form-check-input" value="<?= $model->aluguel ?>" >
 
             <label for="venda">Venda:</label>
-            <input name="venda" id="venda" type="checkbox" value="<?= $model->venda ?>" >
+            <input name="venda" id="venda" type="checkbox" class="form-check-input" value="<?= $model->venda ?>" >
 
             <label for="particular">Particular:</label>
-            <input name="particular" id="particular" type="checkbox" value="<?= $model->particular ?>" >
+            <input name="particular" id="particular" type="checkbox" class="form-check-input" value="<?= $model->particular ?>" >
 
             <label for="observacoes">Observações:</label>
-            <input name="observacao" id="observacao" type="text" value="<?= $model->observacao ?>" >
+            <input name="observacao" id="observacao" type="text" class="form-control" value="<?= $model->observacao ?>" >
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
         </div>
         
 
